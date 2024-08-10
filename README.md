@@ -98,3 +98,52 @@ Este proyecto está organizado en una serie de tareas principales, cada una divi
 
 Este README proporciona una estructura clara para seguir el progreso del proyecto, desde la configuración inicial hasta las pruebas finales. Cada tarea y subtarea está claramente definida, junto con sus respectivos commits, lo que facilita la revisión del historial de desarrollo.
 
+# Estructura
+
+```
+│
+├── src/ # Código fuente de la aplicación
+│ ├── config/ # Configuración de la aplicación 
+│ │ ├── theme/ # Tema de la aplicación
+│ │ ├── router/ # Configuración de las rutas
+│ │ | ├── AppRouter.tsx
+│ │ | ├── PrivateRoutes.tsx
+│ │ | ├── JournalRoutes.tsx
+│ │ | ├── RouteWrapper.tsx
+│ │ ├── layout/ # Layout de la aplicación
+│ ├── services/ # Servicios para interactuar con APIs 
+│ ├── app/ # Componentes principales de la aplicación 
+│ │ ├── common/ # Recursos comunes
+│ │ | ├── component/ # Componentes comunes
+│ │ | | ├── table/ # Tablas comunes
+│ │ | | ├── button/ # Botones comunes
+│ │ | | ├── ...
+│ │ ├── modules/ # Módulos de la aplicación
+│ │ | ├── auth
+│ │ | | ├── ...
+│ │ | ├── home
+│ │ | | ├── ...
+│ │ | ├── order
+│ │ | | ├── ...
+│ │ | ├── claim
+│ │ | | ├── ...
+│ │ | ├── company
+│ │ | | ├── Company.view.tsx
+│ │ | | ├── component/ # Componentes de la vista
+│ │ | ├── treatment
+│ │ | | ├── ...
+│ │ | ├── professional
+│ │ | | ├── ...
+│ │ | ├── patient
+│ │ | | ├── ...
+│ │ | ├── liquidation
+│ │ | | ├── ...
+│ │ | ├── summary
+│ │ | | ├── ...
+│ │ | ├── email
+│ │ | | ├── ...
+│ │ | ├── chat
+│ │ | | ├── ...
+│ ...
+└── package.json # Dependencias y scripts del proyecto
+```
