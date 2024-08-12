@@ -1,98 +1,85 @@
 # Proyecto React: Tareas y Commits
 
-Este proyecto está organizado en una serie de tareas principales, cada una dividida en subtareas más pequeñas. Cada subtarea se corresponde con un commit específico, facilitando el seguimiento del progreso del proyecto.
+---
+
+## Tarea 1: Configurar Main
+
+### Subtarea 1.1: JournalApp y Styles.css 
+- **Descripción:** Configuración del componente principal `JournalApp` y enlace al archivo `styles.css` para aplicar estilos globales.
+- **Commit:** `feat: configure JournalApp with styles.css`
+
+### Subtarea 1.2: Crear el JournalApp
+- **Descripción:** Configuración del componente `JournalApp` para manejar las rutas del proyecto y actuar como el punto de entrada de la aplicación.
+- **Commit:** `feat: setup JournalApp to handle project routes`
+
+### Subtarea 1.3: Browser Router
+- **Descripción:** Instalación y configuración de las dependencias de `react-router-dom`, específicamente `BrowserRouter` para manejar el enrutado del proyecto.
+- **Commit:** `chore: install BrowserRouter dependencies`
 
 ---
 
-## Tarea 1: Configuración del entorno de desarrollo
+## Tarea 2: Configurar Router
 
-**Descripción:** Configurar el entorno inicial para desarrollar la aplicación en React, incluyendo la instalación de dependencias y la estructura base del proyecto.
+### Subtarea 2.1: Crear AppRouter
+- **Descripción:** Configuración del `AppRouter` para manejar el enrutado de `Login` y `JournalRoutes`, estableciendo las bases para la navegación en la aplicación.
+- **Commit:** `feat: configure AppRouter to handle Login and JournalRoutes`
 
-### Subtarea 1.1: Inicializar proyecto con Create React App
-- **Descripción:** Crear la estructura base del proyecto usando Create React App.
-- **Commit:** `feat: inicializar proyecto con Create React App`
-
-### Subtarea 1.2: Configurar ESLint y Prettier
-- **Descripción:** Añadir y configurar ESLint y Prettier para mantener un código limpio y consistente.
-- **Commit:** `chore: configurar ESLint y Prettier`
-
-### Subtarea 1.3: Instalar dependencias esenciales
-- **Descripción:** Instalar dependencias esenciales como React Router, Axios, y Styled-components.
-- **Commit:** `chore: instalar dependencias esenciales`
+### Subtarea 2.2: Crear PrivateRoutes
+- **Descripción:** Configuración del `AppRouter` para proteger las rutas de `JournalRoutes`, asegurando que solo los usuarios autenticados puedan acceder a ellas.
+- **Commit:** `feat: setup PrivateRoutes for JournalRoutes`
 
 ---
 
-## Tarea 2: Configuración del enrutado
+## Tarea 3: Crear Auth
 
-**Descripción:** Configurar el sistema de enrutado para la navegación dentro de la aplicación.
+### Subtarea 3.1: Crear Carpetas 
+- **Descripción:** Creación de las carpetas necesarias para organizar el módulo de autenticación dentro de la estructura del proyecto.
+- **Commit:** `chore: create folder structure for Auth module`
 
-### Subtarea 2.1: Configurar React Router
-- **Descripción:** Instalar y configurar React Router para manejar las rutas principales.
-- **Commit:** `feat: configurar React Router`
+### Subtarea 3.2: Crear AuthRoutes 
+- **Descripción:** Configuración de `AuthRoutes` para manejar las rutas relacionadas con la autenticación, como el login.
+- **Commit:** `feat: setup AuthRoutes for login handling`
 
-### Subtarea 2.2: Crear componentes para las rutas principales
-- **Descripción:** Crear los componentes básicos para las rutas como Home, About y Contact.
-- **Commit:** `feat: crear componentes de Home, About y Contact`
+### Subtarea 3.3: Crear IniciarSesion
+- **Descripción:** Desarrollo del componente `IniciarSesion` para gestionar la interfaz de inicio de sesión de la aplicación.
+- **Commit:** `feat: create IniciarSesion component for login`
 
-### Subtarea 2.3: Definir rutas en el archivo de enrutado
-- **Descripción:** Añadir las rutas en el archivo de enrutado y asociarlas con los componentes creados.
-- **Commit:** `feat: definir rutas principales`
+### Subtarea 3.4: Configurar Context
+- **Descripción:** Configuración de `AuthContext`, `AuthProvider`, `authReducer` e `index` para gestionar el estado de autenticación en toda la aplicación.
+- **Commit:** `feat: setup AuthContext and AuthProvider with authReducer`
 
----
-
-## Tarea 3: Desarrollo de la interfaz de usuario
-
-**Descripción:** Desarrollar la interfaz gráfica de la aplicación utilizando componentes de React y Styled-components.
-
-### Subtarea 3.1: Crear el componente Header
-- **Descripción:** Diseñar y desarrollar el componente Header, incluyendo el logo y la navegación básica.
-- **Commit:** `feat: crear el componente Header`
-
-### Subtarea 3.2: Crear el componente Footer
-- **Descripción:** Diseñar y desarrollar el componente Footer con enlaces de navegación y derechos de autor.
-- **Commit:** `feat: crear el componente Footer`
-
-### Subtarea 3.3: Desarrollar la página de inicio (Home)
-- **Descripción:** Crear la página principal de la aplicación con secciones destacadas y un diseño atractivo.
-- **Commit:** `feat: desarrollar la página de inicio`
+### Subtarea 3.5: Configurar Types
+- **Descripción:** Definición y configuración de los `types` para las acciones de autenticación, proporcionando constantes que representen los diferentes tipos de acciones.
+- **Commit:** `chore: define types for auth actions`
 
 ---
 
-## Tarea 4: Implementación de la lógica de negocio
+## Tarea 4: Crear Home
 
-**Descripción:** Desarrollar la lógica de negocio, incluyendo la gestión de estado y la comunicación con API externas.
+### Subtarea 4.1: Crear Carpetas 
+- **Descripción:** Creación de la estructura de carpetas para organizar los componentes relacionados con la página principal (`Home`).
+- **Commit:** `chore: create folder structure for Home components`
 
-### Subtarea 4.1: Configurar Redux para la gestión de estado
-- **Descripción:** Instalar y configurar Redux para manejar el estado global de la aplicación.
-- **Commit:** `feat: configurar Redux`
+### Subtarea 4.2: Crear JournalRoutes
+- **Descripción:** Configuración de `JournalRoutes` para manejar todas las rutas de la sección principal del diario, integrando los componentes necesarios.
+- **Commit:** `feat: setup JournalRoutes with all main routes`
 
-### Subtarea 4.2: Crear actions y reducers para manejar el estado
-- **Descripción:** Desarrollar las actions y reducers necesarios para la gestión de datos.
-- **Commit:** `feat: crear actions y reducers`
+### Subtarea 4.3: Crear HomeLayout
+- **Descripción:** Desarrollo del componente `HomeLayout` para definir la estructura básica de la página principal, incluyendo la organización de elementos como la `Sidebar` y el `Navbar`.
+- **Commit:** `feat: create HomeLayout component`
 
-### Subtarea 4.3: Implementar comunicación con API externa
-- **Descripción:** Configurar Axios y desarrollar la lógica para consumir datos desde una API externa.
-- **Commit:** `feat: implementar comunicación con API externa`
+### Subtarea 4.4: Crear Sidebar
+- **Descripción:** Desarrollo del componente `Sidebar` para proporcionar una navegación lateral en la aplicación, permitiendo acceso rápido a las diferentes secciones.
+- **Commit:** `feat: create Sidebar component for navigation`
 
----
+### Subtarea 4.5: Crear Navbar
+- **Descripción:** Desarrollo del componente `Navbar` para la barra de navegación superior, con enlaces a las principales secciones de la aplicación.
+- **Commit:** `feat: create Navbar component`
 
-## Tarea 5: Pruebas y depuración
+### Subtarea 4.6: Crear Pages
+- **Descripción:** Configuración de las diferentes páginas de la aplicación, asegurando que cada `Page` esté correctamente ubicada y vinculada en la vista principal.
+- **Commit:** `feat: setup pages for proper view alignment`
 
-**Descripción:** Asegurar la calidad del código mediante pruebas y depuración exhaustiva.
-
-### Subtarea 5.1: Configurar Jest y React Testing Library
-- **Descripción:** Configurar el entorno de pruebas con Jest y React Testing Library.
-- **Commit:** `chore: configurar Jest y React Testing Library`
-
-### Subtarea 5.2: Escribir pruebas unitarias para componentes clave
-- **Descripción:** Desarrollar pruebas unitarias para los componentes principales de la aplicación.
-- **Commit:** `test: escribir pruebas unitarias para componentes`
-
-### Subtarea 5.3: Realizar depuración y corrección de errores
-- **Descripción:** Identificar y corregir errores en el código, asegurando que todo funcione correctamente.
-- **Commit:** `fix: corregir errores detectados durante las pruebas`
-
----
 
 ## Conclusión
 
