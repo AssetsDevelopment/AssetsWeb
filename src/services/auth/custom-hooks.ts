@@ -1,18 +1,13 @@
-// import { useMutation } from "@apollo/client";
-
-// import AuthMutations from "./auth-mutations";
-
-
-// export const authLogin = () => {
-//     return useMutation(AuthMutations.LOGIN)
-// }
-
-
 import { useMutation, MutationTuple } from "@apollo/client";
 import AuthMutations from "./auth-mutations";
 import { LoginClient, LoginClientInput } from "../../app/common/interface/auth.interface";
+import { useSnackbar } from '../../app/common/context/snackbar';
 
 // Tipar el retorno de authLogin
-export const authLogin = (): MutationTuple<LoginClient, LoginClientInput> => {
-  return useMutation<LoginClient, LoginClientInput>(AuthMutations.LOGIN);
+export const useAuthLogin = (): MutationTuple<LoginClient, LoginClientInput> => {
+    const {showSnackbar} = useSnackbar();
+    
+    return useMutation<LoginClient, LoginClientInput>(AuthMutations.LOGIN, {
+        onError: ({message}) => showSnackbar(message, 'error')
+    });
 }

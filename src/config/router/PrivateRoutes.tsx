@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router-dom';
-import { useAuthContext } from '../../app/modules/auth/context/useAuthContext';
+import { useAuthContext } from '../../app/modules/auth/context';
 
 // TODO: tipado
 
