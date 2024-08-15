@@ -1,6 +1,8 @@
 export interface LoginClient {
-    token: string;
-    user:  User;
+    loginClient: {
+        token: string;
+        user:  User;
+    }
 }
 
 export interface User {
@@ -25,7 +27,7 @@ export interface CurrentClient {
 }
 
 export interface LoginClientInput {
-    LoginClientInput: {
+    loginClientInput: {
         email?:    string;
         phone?:    string;
         password: string;
