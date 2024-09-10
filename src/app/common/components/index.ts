@@ -1,5 +1,5 @@
-export { SideBar } from './Sidebar'
-export { Navbar } from './Navbar'
+export { default as Navbar } from './Navbar'
+export { default as Sidebar } from './Sidebar'
 
 import UserConnected from './UserConnected';
 /* import GraphicEmpresa from './GraphicEmpresa';

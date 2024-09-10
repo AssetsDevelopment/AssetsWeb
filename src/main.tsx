@@ -8,7 +8,7 @@ import { SnackbarProvider } from './app/common/context/snackbar';
 
 // Material UI
 import './styles.css';
-import theme from './config/theme/theme.ts';
+import theme from './config/theme/theme.mui.ts';
 import { ThemeProvider } from '@mui/material/styles';
 
 // Apollo

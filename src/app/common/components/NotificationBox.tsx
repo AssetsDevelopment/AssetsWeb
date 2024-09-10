@@ -1,13 +1,22 @@
 import { Box, Typography, List, ListItem, ListItemText, ListItemIcon } from '@mui/material';
 import ReportIcon from '@mui/icons-material/Report';
+import { ReactNode } from 'react';
 
-const styles = {
+/* const styles = {
   icon: {
     color: '#ffffff',
   },
-};
+};  */
 
-export default function NotificationBox({ icon }) {
+type IconProps = {
+  icon: string
+}
+
+interface IconMapping {
+  [key: string]: ReactNode; // Las claves son strings y los valores son componentes React
+}
+
+export default function NotificationBox ({icon}: IconProps) {
   const notifications = [
     { message: 'Johnny sent you an invoice billed $1,000', time: '8 August' },
     { message: 'Sent an invoice to Able Bugs amount of $200', time: '7 hours ago' },
@@ -15,7 +24,7 @@ export default function NotificationBox({ icon }) {
     { message: 'Cristina danny invited to you join Meeting', time: '7 hours ago' },
   ];
 
-  const iconMapping = {
+  const iconMapping: IconMapping = {
     '1': <ReportIcon />,
   };
 

@@ -1,42 +1,60 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.CircleSemanaAnterior {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #3f51b5;
+  border-radius: 50%;
+  margin-right: 8px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.CircleSemana {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #1fe46e;
+  border-radius: 50%;
+  margin-right: 8px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* Home */
 .card {
-  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
-.read-the-docs {
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 48px;
+  color: #1976d2;
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 14px;
   color: #888;
+}
+
+@media (max-width: 600px) {
+  .card {
+    margin-bottom: 16px;
+  }
 }
