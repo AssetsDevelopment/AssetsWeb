@@ -1,5 +1,5 @@
 export interface LoginClient {
-    loginClient: {
+    LoginClient: {
         token: string;
         user:  User;
     }

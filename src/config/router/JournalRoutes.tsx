@@ -1,14 +1,15 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
-/* import { RouteWrapper } from './RouteWrapper'; */
+import { RouteWrapper } from './RouteWrapper';
+import { CompanyPage, HomePage } from '../../app/modules/index';
 
 export const JournalRoutes = () => {
     return (
       <Routes>
-        {/* <Route path='/' element={ <RouteWrapper component={Home} /> } /> */}
+        <Route path='/' element={ <RouteWrapper component={HomePage} /> } />
         {/* <Route path='/pedidos/recibidos' element={ <RouteWrapper component={Pedidos} /> } /> */}
         {/* <Route path='/reclamos' element={ <RouteWrapper component={Reclamos} /> } /> */}
         {/* <Route path='/reclamos/:id' element={ <RouteWrapper component={ReclamosDetalle} /> } /> */}
-        {/* <Route path='/empresa' element={ <RouteWrapper component={Empresa} /> } /> */}
+        <Route path='/empresa' element={ <RouteWrapper component={CompanyPage} /> } />
         {/* <Route path='/empresa/:id' element={ <RouteWrapper component={EmpresaDetalle} /> } /> */}
         {/* <Route path='/prestaciones' element={ <RouteWrapper component={Prestaciones} /> } /> */}
         {/* <Route path='/prestaciones/:id' element={ <RouteWrapper component={PrestacionesDetalle} /> } /> */}
