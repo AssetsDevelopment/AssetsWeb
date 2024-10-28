@@ -24,8 +24,15 @@ export const AuthProvider = ({ children }: {children: ReactNode}): JSX.Element =
 
     const login = (response: LoginClient) => {
 
-        const {loginClient} = response;
-        const { user, token } = loginClient;
+        console.log('response', response);  
+        const { LoginClient } = response;
+
+        // console.log('loginClient', loginClient);
+
+        const { user, token } = LoginClient;
+
+        // console.log('user', user);
+        // console.log('token', token);
 
         const action: AuthAction = { 
             type: AuthTypes.login, 

@@ -3,8 +3,16 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { Link } from 'react-router-dom';
+import { MenuProps } from '@mui/material/Menu';
 
-export default function UserConnected({ anchorEl, onLogout, handleMenu, handleClose }) {
+type UserConnectedProps = {
+  anchorEl: MenuProps['anchorEl'];
+  onLogout: () => void;
+  handleMenu: (event: React.MouseEvent<HTMLElement>) => void;
+  handleClose: () => void;
+};
+
+export default function UserConnected({ anchorEl, onLogout, handleMenu, handleClose }: UserConnectedProps) {
   return (
     <div>
       <IconButton
@@ -41,3 +49,5 @@ export default function UserConnected({ anchorEl, onLogout, handleMenu, handleCl
     </div>
   );
 }
+
+/* VER */

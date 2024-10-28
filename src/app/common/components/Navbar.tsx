@@ -1,20 +1,22 @@
 import { useNavigate } from "react-router-dom";
-import { FormEvent, MouseEvent, useState } from "react";
+import { MouseEvent, useState } from "react";
 import { useAuthContext } from "../../modules/auth/context";
 
 // Mui
 import { MenuOutlined, NotificationsOutlined } from "@mui/icons-material";
-import { AppBar, Grid, IconButton, Toolbar, Box, Badge, Menu } from "@mui/material";
+import { AppBar, Grid, IconButton, Toolbar, Box, Badge, Menu, Typography } from "@mui/material";
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import NotificationBox from "./NotificationBox";
 import UserConnected from "./UserConnected";
 
-// Iconos
-// import UserConnected from "./UserConnected";
-// import NotificationBox from "./NotificationBox";
+type NavbarProps = {
+    handleOpenSidebar: () => void;
+};
 
-export const Navbar: React.FC<{ toggleOpen: () => void }> = ({ toggleOpen })=> {
+const drawerWidth = 240; // Definir el ancho del Drawer
+
+export default function Navbar({ handleOpenSidebar }: NavbarProps) {
 
     const { user, logout } = useAuthContext()
 
@@ -22,7 +24,7 @@ export const Navbar: React.FC<{ toggleOpen: () => void }> = ({ toggleOpen })=> {
     const [notificationsAnchorEl, setNotificationsAnchorEl] = useState<HTMLButtonElement | null>(null);
     const navigate = useNavigate();
 
-    const handleMenu = (e: FormEvent<HTMLFormElement>) => {
+    const handleMenu = (e: MouseEvent<HTMLElement>) => {
         setAnchorEl(e.currentTarget);
     };
 
@@ -48,8 +50,8 @@ export const Navbar: React.FC<{ toggleOpen: () => void }> = ({ toggleOpen })=> {
             <AppBar 
             position="fixed"
             sx={{ 
-                width: { sm: `calc(100% - 240px)`},
-                ml: { sm: `240px`},
+                width: { sm: `calc(100% - ${drawerWidth}px)`},  
+                ml: { sm: `${drawerWidth}px` },                 
                 backgroundColor: (theme) => theme.palette.primary.main,
             }}
             >
@@ -60,7 +62,7 @@ export const Navbar: React.FC<{ toggleOpen: () => void }> = ({ toggleOpen })=> {
                     color='inherit'
                     edge="start"
                     sx={{ mr: 2, display: { sm: 'none' } }}
-                    onClick={toggleOpen}
+                    onClick={handleOpenSidebar}
                     >
                     <MenuOutlined /> 
                     </IconButton>
@@ -83,7 +85,7 @@ export const Navbar: React.FC<{ toggleOpen: () => void }> = ({ toggleOpen })=> {
                     >
                         <NotificationBox icon="1" />
                     </Menu>
-                    {/* <Typography variant="p">{user.email}</Typography> */}
+                    <Typography variant="p">{user.email}</Typography>
                     <UserConnected
                         anchorEl={anchorEl}
                         handleMenu={handleMenu}
